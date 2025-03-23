@@ -1,0 +1,60 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 80px;
+        .logo {
+            .btn {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                @include mixins.fs-fw-cl(1.1rem, 500, variables.$color-secondary);
+                gap: 8px;
+                
+                img {
+                    width: 27px;
+                    height: 27px;
+                }
+            }
+        }
+        .nav {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            .navbar {
+                display: flex;
+                gap: 32px;
+                .link {
+                    text-decoration: none;
+                    @include mixins.fs-fw-cl(1rem, 500, variables.$color-tertiary);
+                    padding: 4px 0;
+                }
+            }
+        }
+        .white-space{
+            width: 142px;
+            height: 32px;
+        }
+        .nav_actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            .btn {
+                display: flex;
+                border-radius: 8px;
+                text-decoration: none;
+                @include mixins.fs-fw-cl(1rem, 500, variables.$color-tertiary);
+                padding: 10px 18px;
+                gap: 8px;
+            }
+            .btn-primary {
+                color: #fff;
+                background: variables.$color-primary;
+                border: 1px solid variables.$color-primary;
+            }
+        }
+    }
+}
